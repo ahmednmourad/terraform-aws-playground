@@ -1,0 +1,16 @@
+# fail_fast: true
+repos:
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.23 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+    hooks:
+      - id: tflint
+        args:
+          - "--module"
+      - id: terraform-validate
+      - id: terraform-fmt
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.88.0 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+    hooks:
+      - id: terraform_docs
+      # - id: terraform_trivy
+      # - id: terraform_checkov
