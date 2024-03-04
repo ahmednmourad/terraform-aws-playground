@@ -8,7 +8,7 @@ module "terraform_s3_state" {
 
 resource "aws_instance" "app_server" {
   ami           = "ami-0a23a9827c6dab833"
-  instance_type = "t2.micro"
+  instance_type = "t2.nano"
 
   tags = {
     Environment = "dev"
