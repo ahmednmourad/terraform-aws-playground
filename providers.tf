@@ -8,14 +8,13 @@ terraform {
     }
   }
 
-
-  # backend "s3" {
-  #   bucket         = "<YOUR_S3_BUCKET_HERE>" # Replace this with your bucket name!
-  #   key            = "global/s3/terraform.tfstate"
-  #   region         = "us-east-2"
-  #   dynamodb_table = "YOUR_DYNAMODB_TABLE_NAME_HERE" # Replace this with your DynamoDB table name!
-  #   encrypt        = true
-  # }
+  backend "s3" {
+    bucket         = "terraform-remote-state-bucket-778858665906"
+    key            = "global/s3/terraform.tfstate"
+    region         = "eu-central-1"
+    dynamodb_table = "terraform-remote-state-dynamo"
+    encrypt        = true
+  }
 }
 
 provider "aws" {
