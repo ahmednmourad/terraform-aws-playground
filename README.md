@@ -31,17 +31,22 @@ choco install tflint terraform-docs trivy -y
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_terraform_s3_state"></a> [terraform\_s3\_state](#module\_terraform\_s3\_state) | ./modules/terraform-s3-state | n/a |
 
 ## Resources
 
 | Name | Type |
 |------|------|
 | [aws_instance.app_server](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | n/a | `string` | `"eu-central-1"` | no |
 
 ## Outputs
 
